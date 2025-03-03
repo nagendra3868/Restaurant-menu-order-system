@@ -1,0 +1,101 @@
+body{
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out;
+}
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+header{
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+header h1{
+    margin: 0;
+}
+nav ul{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0 10px;
+}
+ 
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+ 
+section{
+    display: none;
+}
+ 
+section.active{
+    display: block;
+}
+.menu-item, .wishlist-item{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.food-image, .wishlist-image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.item-details{
+    display: flex;
+    flex-direction: column;
+}
+button{
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#cart button{
+    background: #28a745;
+    color: #c94545;
+}
+#cart button:hover{
+    background: #218838;
+}
+#wishlist button{
+    background: #007bff;
+    color: #fff;
+}
+#wishlist button:hover{
+    background: #0056b3;
+}
+#owner-login button{
+    background: #ffc107;
+    color: #000;
+}
+#owner-login button:hover{
+    background: #e0a800;
+}
+#owner-dashboard button {
+    background: #dc3545;
+    color: #fff;
+}
+#owner-dashboard button:hover{
+    background: #c82333;
+}
+.menu-item button{
+    background: #343a40;
+    color: #fff;
+}
+.menu-item button:hover{
+    background: #23272b;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTAURANT ORDER MENU</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>RESTAURANT ORDER MENU</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about" onclick="showSection('about')">About</a></li>
+                    <li><a href="#menu" onclick="showSection('menu')">Menu</a></li>
+                    <li><a href="#wishlist" onclick="showSection('wishlist')">Wishlist(<span id="wishlist-count">0</span>)</a></li>
+                    <li><a href="#cart" onclick="showSection('cart')">Cart</a></li>
+                    <li><a href="#owner-login" onclick="showSection('owner-login')">Owner Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="about" class="active">
+    <h2>About Us</h2>
+          <p>Welcome to our restaurant! We offer a variety of delicious dishes made from the freshest ingredients.<br>
+        Our chefs demonstrate the preparation of each dish to ensure you have a delightful dining experience.<br>
+        Our journey began with a passion for food and a dream to build a place where people could come <br> together to savor delicious meals and make lasting memories.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Featured Dishes</h2>
+            <div id="menu-items"></div>
+        </section>
+
+        <section id="cart">
+            <h2>Cart</h2>
+            <ul id="cart-list"></ul>
+            <p>Total: ₹<span id="total-price">0.00</span></p>
+            <label for="table-number">Table Number:</label>
+            <input type="number" id="table-number" min="1" max="20" value="1">
+            <button onclick="placeOrder()">Place Order</button>
+        </section>
+
+        <section id="wishlist">
+            <h2>Wishlist</h2>
+            <ul id="wishlist-list"></ul>
+        </section>
+<section id="owner-login">
+                <h2>Owner Login</h2>
+                <input type="text" id="email" placeholder="email">
+                <input type="password" id="password" placeholder="Password">
+                <button onclick="ownerLogin()">Login</button>
+            </section>
+    
+            <section id="owner-dashboard">
+                <h2>Owner Dashboard</h2>
+                <div id="order-list">
+                    <h3>Orders</h3>
+                    <ul id="orders"></ul>
+                </div>
+                <div id="manage-menu">
+                    <h3>Manage Menu</h3>
+                    <div id="menu-items-owner"></div>
+                    <button onclick="addNewItem()">Add New Item</button>
+                </div>
+            </section>
+        </div>
+    
+        <script src="menu.js"></script>
+    </body>
+</html>
+
